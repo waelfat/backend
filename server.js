@@ -5,9 +5,6 @@ const morgan=require('morgan');
 const  helmet =require('helmet');
 require('dotenv').config()
 
-
-
-
 const app=express()
 app.use(cors()).use(morgan('tiny')).use(helmet()).use(express.json())
 app.get('/',(req,res,next)=>{
