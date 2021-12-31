@@ -1,15 +1,15 @@
-import express from 'express';
-import cors from    'cors'
-import bodyParser from 'body-parser';
-import morgan from 'morgan';
-import helmet from 'helmet';
+const express=require( 'express');
+const cors= require('cors');
+//import bodyParser from 'body-parser';
+const morgan=require('morgan');
+const  helmet =require('helmet');
 require('dotenv').config()
 
 
 
 
 const app=express()
-app.use(cors()).use(morgan()).use(helmet()).use(express.json())
+app.use(cors()).use(morgan('tiny')).use(helmet()).use(express.json())
 app.get('/',(req,res,next)=>{
     res.send('ehll')
 })
