@@ -9,9 +9,9 @@ require('dotenv').config()
 
 
 const app=express()
-app.use(cors()).use(morgan()).use(helmet())
+app.use(cors()).use(morgan()).use(helmet()).use(express.json())
 app.get('/',(req,res,next)=>{
-    res.json('ehll')
+    res.send('ehll')
 })
 app.listen(process.env.PORT,()=>{
     console.log('LISTEN');
